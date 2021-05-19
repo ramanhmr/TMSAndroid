@@ -2,7 +2,7 @@ package com.ramanhmr.tmsandroid.homework2
 
 object LocalGarage {
     private fun getCars(): List<Car> {
-        return listOf<Car>(
+        return listOf(
             Car("Honda", 1.7, "HM-5345", "green"),
             Car("BMW", 2.2, null),
             Car("Skoda", 1.8, "KM-9895", "silver"),
@@ -13,6 +13,6 @@ object LocalGarage {
     }
 
     fun describeCars() {
-        println(getCars().iterator().forEach { car -> car.description() })
+        getCars().iterator().forEach { car -> println(car.description()) }
     }
 }

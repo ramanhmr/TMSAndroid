@@ -12,7 +12,7 @@ class Car(
         private set
 
     fun description(): String {
-        return "Brand: ${brand},\nColour: ${colour},\nEngine displacement: ${displacement},\nRegistration plate:" +
+        return "Brand: ${brand},\nColour: ${colour},\nEngine displacement: ${displacement},\nRegistration plate: " +
                 (registration ?: "transit") + "."
     }
 
