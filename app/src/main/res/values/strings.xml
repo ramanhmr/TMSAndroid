@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">TMS Android</string>
-    <string name="homework6">Homework 6</string>
+    <string name="homework6">HOMEWORK 6 - the one with flags</string>
+    <string name="poland">Poland</string>
+    <string name="germany">Germany</string>
+    <string name="france">France</string>
+    <string name="latvia">Latvia</string>
+    <string name="finland">Finland</string>
 </resources>

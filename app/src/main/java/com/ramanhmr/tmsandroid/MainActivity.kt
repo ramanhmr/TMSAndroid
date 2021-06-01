@@ -2,18 +2,18 @@ package com.ramanhmr.tmsandroid
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.homework6.Homework6Activity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var textView: TextView
+    lateinit var homework6Button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textView = findViewById(R.id.tv)
-        textView.setOnClickListener {
+        homework6Button = findViewById(R.id.hw6)
+        homework6Button.setOnClickListener {
             startActivity(Intent(this, Homework6Activity::class.java))
         }
     }
