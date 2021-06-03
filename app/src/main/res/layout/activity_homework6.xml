@@ -17,7 +17,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end|center"
@@ -25,7 +25,7 @@
                 android:text="@string/poland" />
 
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
@@ -41,13 +41,13 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/white" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/red" />
                 </LinearLayout>
@@ -63,7 +63,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end|center"
@@ -71,7 +71,7 @@
                 android:text="@string/germany" />
 
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
@@ -87,19 +87,19 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/black" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/red" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/yellow" />
                 </LinearLayout>
@@ -115,7 +115,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end|center"
@@ -123,7 +123,7 @@
                 android:text="@string/france" />
 
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
@@ -137,19 +137,19 @@
                     android:paddingBottom="1dp">
 
                     <View
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/fr_blue" />
 
                     <View
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/white" />
 
                     <View
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/fr_red" />
@@ -166,7 +166,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end|center"
@@ -174,7 +174,7 @@
                 android:text="@string/finland" />
 
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
@@ -190,23 +190,23 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="4">
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:background="@color/white" />
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:background="@color/fin_blue" />
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             android:background="@color/white" />
@@ -214,29 +214,29 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="3"
                         android:background="@color/fin_blue" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="4">
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="5"
                             android:background="@color/white" />
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:background="@color/fin_blue" />
 
                         <View
-                            android:layout_width="10dp"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="10"
                             android:background="@color/white" />
@@ -254,7 +254,7 @@
             android:paddingBottom="20dp">
 
             <TextView
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="end|center"
@@ -262,7 +262,7 @@
                 android:text="@string/latvia" />
 
             <LinearLayout
-                android:layout_width="10dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2">
 
@@ -278,19 +278,19 @@
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="2"
                         android:background="@color/lt_red" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="1"
                         android:background="@color/white" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="10dp"
+                        android:layout_height="0dp"
                         android:layout_weight="2"
                         android:background="@color/lt_red" />
                 </LinearLayout>

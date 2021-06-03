@@ -7,12 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.homework6.Homework6Activity
 
 class MainActivity : AppCompatActivity() {
-    lateinit var homework6Button: Button
+    private lateinit var homework6Button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        homework6Button = findViewById(R.id.hw6)
+        homework6Button = findViewById(R.id.btn_homework6)
         homework6Button.setOnClickListener {
             startActivity(Intent(this, Homework6Activity::class.java))
         }
