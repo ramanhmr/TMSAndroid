@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".homework6.Homework6Activity" />
+        <activity android:name=".homework7.CountdownActivity" />
+        <activity android:name=".homework7.UserInfoActivity" />
     </application>
 
 </manifest>

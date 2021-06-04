@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.homework6.Homework6Activity
+import com.ramanhmr.tmsandroid.homework7.CountdownActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var homework6Button: Button
+    private lateinit var homework7Button: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         homework6Button = findViewById(R.id.btn_homework6)
         homework6Button.setOnClickListener {
             startActivity(Intent(this, Homework6Activity::class.java))
+        }
+
+        homework7Button = findViewById(R.id.btn_homework7)
+        homework7Button.setOnClickListener {
+            startActivity(Intent(this, CountdownActivity::class.java))
         }
     }
 }

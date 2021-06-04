@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:text=""
+            android:textSize="100sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <EditText
+                android:id="@+id/et_login"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/light_gray"
+                android:layout_gravity="center_horizontal|bottom"
+                android:hint="@string/hw7_loginInput"
+                android:visibility="invisible"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:background="@color/light_gray"
+                android:layout_gravity="center_horizontal|bottom"
+                android:hint="@string/hw7_passwordInput"
+                android:visibility="invisible"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <Button
+            android:id="@+id/btn_tapMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/hw7_tapMe" />
+    </FrameLayout>
+</LinearLayout>
