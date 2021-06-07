@@ -14,9 +14,9 @@ class UserInfoActivity : AppCompatActivity() {
         setContentView(R.layout.activity_hw7_user_info)
 
         loginInfoTV = findViewById(R.id.tv_login)
-        loginInfoTV.text = intent.getStringExtra("login")
+        loginInfoTV.text = intent.getStringExtra(CountdownActivity.LOGIN)
 
         passwordInfoTV = findViewById(R.id.tv_password)
-        passwordInfoTV.text = intent.getStringExtra("password")
+        passwordInfoTV.text = intent.getStringExtra(CountdownActivity.PASSWORD)
     }
 }

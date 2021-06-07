@@ -41,10 +41,15 @@ class CountdownActivity : AppCompatActivity() {
                     Log.i("KEK", passwordET.text.toString())
                     startActivity(
                         Intent(this, UserInfoActivity::class.java)
-                            .putExtra("login", loginET.text.toString())
-                            .putExtra("password", passwordET.text.toString()))
+                            .putExtra(LOGIN, loginET.text.toString())
+                            .putExtra(PASSWORD, passwordET.text.toString()))
                 }
             }
         }
+    }
+
+    companion object {
+        const val LOGIN = "login"
+        const val PASSWORD = "password"
     }
 }
