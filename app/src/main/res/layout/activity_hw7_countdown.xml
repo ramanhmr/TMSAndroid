@@ -19,11 +19,13 @@
             android:textSize="100sp" />
 
         <LinearLayout
+            android:id="@+id/vg_login_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:orientation="vertical"
-            android:paddingBottom="50dp">
+            android:paddingBottom="50dp"
+            android:visibility="invisible">
 
             <EditText
                 android:id="@+id/et_login"
@@ -34,7 +36,6 @@
                 android:background="@color/light_gray"
                 android:layout_gravity="center_horizontal|bottom"
                 android:hint="@string/hw7_loginInput"
-                android:visibility="invisible"
                 android:inputType="text" />
 
             <EditText
@@ -46,7 +47,6 @@
                 android:background="@color/light_gray"
                 android:layout_gravity="center_horizontal|bottom"
                 android:hint="@string/hw7_passwordInput"
-                android:visibility="invisible"
                 android:inputType="textPassword" />
         </LinearLayout>
     </FrameLayout>

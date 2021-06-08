@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -16,6 +17,7 @@ class CountdownActivity : AppCompatActivity() {
     private lateinit var countTV: TextView
     private lateinit var loginET: EditText
     private lateinit var passwordET: EditText
+    private lateinit var loginPassVG: ViewGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +25,10 @@ class CountdownActivity : AppCompatActivity() {
 
         countTV = findViewById(R.id.tv_count)
         countTV.text = counter.toString()
-
         loginET = findViewById(R.id.et_login)
         passwordET = findViewById(R.id.et_password)
-
         tappingBtn = findViewById(R.id.btn_tapMe)
+        loginPassVG = findViewById(R.id.vg_login_password)
         tappingBtn.setOnClickListener {
             counter--
             if (counter > 0) {
@@ -35,8 +36,7 @@ class CountdownActivity : AppCompatActivity() {
             } else {
                 tappingBtn.text = getString(R.string.hw7_enter)
                 countTV.visibility = View.GONE
-                loginET.visibility = View.VISIBLE
-                passwordET.visibility = View.VISIBLE
+                loginPassVG.visibility = View.VISIBLE
                 tappingBtn.setOnClickListener {
                     Log.i("KEK", passwordET.text.toString())
                     startActivity(
