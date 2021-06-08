@@ -1,22 +1,18 @@
 package com.ramanhmr.tmsandroid.homework7
 
 import android.os.Bundle
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.ramanhmr.tmsandroid.R
+import com.ramanhmr.tmsandroid.databinding.ActivityHw7UserInfoBinding
 
 class UserInfoActivity : AppCompatActivity() {
-    private lateinit var loginInfoTV: TextView
-    private lateinit var passwordInfoTV: TextView
+    private lateinit var binding: ActivityHw7UserInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hw7_user_info)
-
-        loginInfoTV = findViewById(R.id.tv_login)
-        loginInfoTV.text = intent.getStringExtra(CountdownActivity.LOGIN)
-
-        passwordInfoTV = findViewById(R.id.tv_password)
-        passwordInfoTV.text = intent.getStringExtra(CountdownActivity.PASSWORD)
+        binding = ActivityHw7UserInfoBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.tvLogin.text = intent.getStringExtra(CountdownActivity.LOGIN_KEY)
+        binding.tvPassword.text = intent.getStringExtra(CountdownActivity.PASSWORD_KEY)
+        binding.btnClose.setOnClickListener { this.finish() }
     }
 }

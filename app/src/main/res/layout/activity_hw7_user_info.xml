@@ -1,56 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="30dp"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/hw7_user_info"
-        android:textSize="20sp" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vg_data"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintStart_toEndOf="@+id/image">
 
         <TextView
+            android:id="@+id/tv_login_banner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
+            android:layout_marginBottom="10dp"
             android:text="@string/hw7_login"
-            android:layout_marginEnd="20dp" />
+            app:layout_constraintBottom_toTopOf="@id/tv_password_banner"
+            app:layout_constraintEnd_toEndOf="@+id/tv_password_banner" />
 
         <TextView
             android:id="@+id/tv_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_login_banner"
+            app:layout_constraintStart_toEndOf="@id/tv_login_banner"
             tools:text="логин" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tv_password_banner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
             android:gravity="end"
             android:text="@string/hw7_password"
-            android:layout_marginEnd="20dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/tv_password"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            app:layout_constraintStart_toStartOf="@id/tv_login"
+            app:layout_constraintTop_toTopOf="@id/tv_password_banner"
             tools:text="пароль" />
-    </LinearLayout>
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_close"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/hw8_close"
+        app:layout_constraintEnd_toEndOf="@id/vg_data"
+        app:layout_constraintStart_toStartOf="@+id/image"
+        app:layout_constraintTop_toBottomOf="@+id/image" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,54 +2,62 @@ package com.ramanhmr.tmsandroid.homework7
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.R
+import com.ramanhmr.tmsandroid.databinding.ActivityHw7CountdownBinding
 
 class CountdownActivity : AppCompatActivity() {
     private var counter: Int = 10
-    private lateinit var tappingBtn: Button
-    private lateinit var countTV: TextView
-    private lateinit var loginET: EditText
-    private lateinit var passwordET: EditText
-    private lateinit var loginPassVG: ViewGroup
+    private var btnOnClick: (View) -> Unit = {
+        counter--
+        if (counter > 0) {
+            binding.tvCount.text = counter.toString()
+        } else {
+            showEditText()
+        }
+    }
+    private lateinit var binding: ActivityHw7CountdownBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_hw7_countdown)
+        binding = ActivityHw7CountdownBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        savedInstanceState?.let {
+            counter = it.getInt(COUNTER_KEY)
+            if (it.getBoolean(COUNTED_KEY)) showEditText()
+        }
+        binding.tvCount.text = counter.toString()
+        binding.btnTapMe.setOnClickListener(btnOnClick)
+    }
 
-        countTV = findViewById(R.id.tv_count)
-        countTV.text = counter.toString()
-        loginET = findViewById(R.id.et_login)
-        passwordET = findViewById(R.id.et_password)
-        tappingBtn = findViewById(R.id.btn_tapMe)
-        loginPassVG = findViewById(R.id.vg_login_password)
-        tappingBtn.setOnClickListener {
-            counter--
-            if (counter > 0) {
-                countTV.text = counter.toString()
-            } else {
-                tappingBtn.text = getString(R.string.hw7_enter)
-                countTV.visibility = View.GONE
-                loginPassVG.visibility = View.VISIBLE
-                tappingBtn.setOnClickListener {
-                    Log.i("KEK", passwordET.text.toString())
-                    startActivity(
-                        Intent(this, UserInfoActivity::class.java)
-                            .putExtra(LOGIN, loginET.text.toString())
-                            .putExtra(PASSWORD, passwordET.text.toString()))
-                }
-            }
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt(COUNTER_KEY, counter)
+        outState.putBoolean(COUNTED_KEY, binding.tvCount.visibility == View.GONE)
+        super.onSaveInstanceState(outState)
+    }
+
+    private fun showEditText() {
+        binding.btnTapMe.text = getString(R.string.hw7_enter)
+        binding.tvCount.visibility = View.GONE
+        binding.vgLoginPassword.visibility = View.VISIBLE
+        changeBtnOnClick()
+        binding.btnTapMe.setOnClickListener(btnOnClick)
+    }
+
+    private fun changeBtnOnClick() {
+        btnOnClick = {
+            startActivity(
+                Intent(this, UserInfoActivity::class.java)
+                    .putExtra(LOGIN_KEY, binding.etLogin.text.toString())
+                    .putExtra(PASSWORD_KEY, binding.etPassword.text.toString()))
         }
     }
 
     companion object {
-        const val LOGIN = "login"
-        const val PASSWORD = "password"
+        const val LOGIN_KEY = "LOGIN_KEY"
+        const val PASSWORD_KEY = "PASSWORD_KEY"
+        private const val COUNTER_KEY = "COUNTER_KEY"
+        private const val COUNTED_KEY = "COUNTED_KEY"
     }
 }
