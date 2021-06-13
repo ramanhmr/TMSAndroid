@@ -9,14 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        app:layout_constraintVertical_bias="0.7"
         android:fontFamily="sans-serif-black"
         android:text=""
-        android:textSize="100sp"
+        android:textSize="104dp"
         app:layout_constraintBottom_toTopOf="@id/btn_tapMe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
 
     <LinearLayout
         android:id="@+id/vg_login_password"
@@ -25,34 +25,44 @@
         android:layout_gravity="center_horizontal|bottom"
         android:orientation="vertical"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/tv_count"
+        app:layout_constraintBottom_toBottomOf="@id/tv_count"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <EditText
-            android:id="@+id/et_login"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_margin="10dp"
-            android:background="@color/light_gray"
-            android:gravity="center"
+            android:layout_margin="8dp"
             android:hint="@string/hw7_loginInput"
-            android:inputType="text" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-        <EditText
-            android:id="@+id/et_password"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_margin="10dp"
-            android:background="@color/light_gray"
-            android:gravity="center"
+            android:layout_margin="8dp"
             android:hint="@string/hw7_passwordInput"
-            android:inputType="textPassword" />
+            app:endIconDrawable="@drawable/ic_baseline_remove_red_eye_24"
+            app:endIconMode="password_toggle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_tapMe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,5 +72,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
+        app:layout_constraintVertical_bias="0.66"
+        app:rippleColor="@color/red" />
 </androidx.constraintlayout.widget.ConstraintLayout>

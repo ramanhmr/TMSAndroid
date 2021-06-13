@@ -6,12 +6,11 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/iv_profile_picture"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
-        android:src="@drawable/ic_baseline_account_circle_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,8 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/image"
-        app:layout_constraintStart_toEndOf="@+id/image">
+        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_picture"
+        app:layout_constraintStart_toEndOf="@+id/iv_profile_picture">
 
         <TextView
             android:id="@+id/tv_login_banner"
@@ -60,13 +59,15 @@
             tools:text="пароль" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_close"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/hw8_close"
         app:layout_constraintEnd_toEndOf="@id/vg_data"
-        app:layout_constraintStart_toStartOf="@+id/image"
-        app:layout_constraintTop_toBottomOf="@+id/image" />
+        app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
+        app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture"
+        app:strokeColor="@color/purple_200"
+        app:strokeWidth="2dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
