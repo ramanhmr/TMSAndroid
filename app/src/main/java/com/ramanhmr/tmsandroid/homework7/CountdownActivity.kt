@@ -23,10 +23,12 @@ class CountdownActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHw7CountdownBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         savedInstanceState?.let {
             counter = it.getInt(COUNTER_KEY)
             if (it.getBoolean(COUNTED_KEY)) showEditText()
         }
+
         binding.tvCount.text = counter.toString()
         binding.btnTapMe.setOnClickListener(btnOnClick)
     }
@@ -38,11 +40,13 @@ class CountdownActivity : AppCompatActivity() {
     }
 
     private fun showEditText() {
-        binding.btnTapMe.text = getString(R.string.hw7_enter)
-        binding.tvCount.visibility = View.GONE
-        binding.vgLoginPassword.visibility = View.VISIBLE
         changeBtnOnClick()
-        binding.btnTapMe.setOnClickListener(btnOnClick)
+        with(binding) {
+            btnTapMe.text = getString(R.string.hw7_enter)
+            tvCount.visibility = View.GONE
+            vgLoginPassword.visibility = View.VISIBLE
+            btnTapMe.setOnClickListener(btnOnClick)
+        }
     }
 
     private fun changeBtnOnClick() {

@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         binding.btnHomework6.setOnClickListener {
             startActivity(Intent(this, Homework6Activity::class.java))
         }

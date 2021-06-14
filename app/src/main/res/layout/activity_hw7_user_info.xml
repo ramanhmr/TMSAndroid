@@ -14,50 +14,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/vg_data"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tv_login_banner"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_profile_picture"
-        app:layout_constraintStart_toEndOf="@+id/iv_profile_picture">
+        android:layout_marginBottom="10dp"
+        android:text="@string/hw7_login"
+        app:layout_constraintBottom_toTopOf="@id/tv_password_banner"
+        app:layout_constraintEnd_toEndOf="@+id/tv_password_banner" />
 
-        <TextView
-            android:id="@+id/tv_login_banner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/hw7_login"
-            app:layout_constraintBottom_toTopOf="@id/tv_password_banner"
-            app:layout_constraintEnd_toEndOf="@+id/tv_password_banner" />
+    <TextView
+        android:id="@+id/tv_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_login_banner"
+        app:layout_constraintStart_toEndOf="@id/tv_login_banner"
+        tools:text="логин" />
 
-        <TextView
-            android:id="@+id/tv_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            app:layout_constraintBottom_toBottomOf="@id/tv_login_banner"
-            app:layout_constraintStart_toEndOf="@id/tv_login_banner"
-            tools:text="логин" />
+    <TextView
+        android:id="@+id/tv_password_banner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="end"
+        android:text="@string/hw7_password"
+        app:layout_constraintBottom_toBottomOf="@id/iv_profile_picture"
+        app:layout_constraintStart_toEndOf="@id/iv_profile_picture" />
 
-        <TextView
-            android:id="@+id/tv_password_banner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:gravity="end"
-            android:text="@string/hw7_password"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/tv_login"
-            app:layout_constraintTop_toTopOf="@id/tv_password_banner"
-            tools:text="пароль" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tv_login"
+        app:layout_constraintTop_toTopOf="@id/tv_password_banner"
+        tools:text="пароль" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_close"
@@ -65,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:text="@string/hw8_close"
-        app:layout_constraintEnd_toEndOf="@id/vg_data"
+        app:layout_constraintEnd_toEndOf="@id/tv_password"
         app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture"
         app:strokeColor="@color/purple_200"

@@ -13,9 +13,13 @@ class UserInfoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHw7UserInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.tvLogin.text = intent.getStringExtra(CountdownActivity.LOGIN_KEY)
-        binding.tvPassword.text = intent.getStringExtra(CountdownActivity.PASSWORD_KEY)
-        binding.btnClose.setOnClickListener { this.finish() }
+
+        with(binding) {
+            tvLogin.text = intent.getStringExtra(CountdownActivity.LOGIN_KEY)
+            tvPassword.text = intent.getStringExtra(CountdownActivity.PASSWORD_KEY)
+            btnClose.setOnClickListener { finish() }
+        }
+
         Glide
             .with(this)
             .load(IMAGE_ADDRESS)
