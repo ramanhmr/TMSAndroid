@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TMS Android</string>
-    <string name="homework6">HOMEWORK 6\nthe one with flags</string>
-    <string name="homework7">HOMEWORK 7\nthe one with countdown</string>
+    <string name="flags_main_btn">HOMEWORK 6\nthe one with flags</string>
+    <string name="countdown_main_btn">HOMEWORK 7\nthe one with countdown</string>
     <string name="poland">Poland</string>
     <string name="germany">Germany</string>
     <string name="france">France</string>
@@ -15,4 +15,5 @@
     <string name="hw7_password">Пароль:</string>
     <string name="hw7_user_info">Информация о пользователе</string>
     <string name="hw8_close">Close</string>
+    <string name="candies_main_btn">HOMEWORK 10\nthe one with candies</string>
 </resources>
