@@ -7,13 +7,13 @@ object CandyMaker {
         val candies = mutableListOf<Candy>()
         for (i in 1..amount) {
             when (i) {
-                in 1..amount/3 -> candies.add(newCandy("Roshen"))
-                in amount/3..amount/3*2 -> candies.add(newCandy("Kamunarka"))
-                else -> candies.add(newCandy("Spartak"))
+                in 1..amount/3 -> candies.add(makeCandy("Roshen"))
+                in amount/3..amount/3*2 -> candies.add(makeCandy("Kamunarka"))
+                else -> candies.add(makeCandy("Spartak"))
             }
         }
         return candies
     }
 
-    fun newCandy(brand: String) = Candy(brand, Random().nextInt(99999999)+1)
+    private fun makeCandy(brand: String) = Candy(brand, Random().nextInt(99999999)+1)
 }

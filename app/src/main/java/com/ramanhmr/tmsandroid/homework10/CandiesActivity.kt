@@ -16,6 +16,10 @@ class CandiesActivity : AppCompatActivity() {
 
         binding.rvCandies.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.rvCandies.adapter = CandiesAdapter(CandyMaker.createCandies(300))
+        binding.rvCandies.adapter = CandiesAdapter(CandyMaker.createCandies(CANDIES_AMOUNT))
+    }
+
+    companion object {
+        private const val CANDIES_AMOUNT = 300
     }
 }
