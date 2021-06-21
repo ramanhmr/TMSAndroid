@@ -5,15 +5,17 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ramanhmr.tmsandroid.R
+import com.ramanhmr.tmsandroid.databinding.ActivityCandiesBinding
 
 class CandiesActivity : AppCompatActivity() {
-    private lateinit var recyclerView: RecyclerView
+    private lateinit var binding: ActivityCandiesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_candies)
+        binding = ActivityCandiesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        recyclerView = this.findViewById(R.id.rv_candies)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = CandiesAdapter(CandyMaker.createCandies(300))
+        binding.rvCandies.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.rvCandies.adapter = CandiesAdapter(CandyMaker.createCandies(300))
     }
 }

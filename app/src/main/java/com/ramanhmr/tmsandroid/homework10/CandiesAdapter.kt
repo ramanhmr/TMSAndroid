@@ -7,11 +7,15 @@ import com.ramanhmr.tmsandroid.databinding.ItemCandyBinding
 
 class CandiesAdapter(private val candies: List<Candy>) :
     RecyclerView.Adapter<CandiesAdapter.CandyViewHolder>() {
-    private lateinit var binding: ItemCandyBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CandyViewHolder {
-        binding = ItemCandyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return CandyViewHolder(binding)
+        return CandyViewHolder(
+            ItemCandyBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: CandyViewHolder, position: Int) {
