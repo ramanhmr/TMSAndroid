@@ -3,7 +3,10 @@ package com.ramanhmr.tmsandroid.homework10
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.ramanhmr.tmsandroid.R
 import com.ramanhmr.tmsandroid.databinding.ItemCandyBinding
+import com.ramanhmr.tmsandroid.homework7.UserInfoActivity
 
 class CandiesAdapter(private val candies: List<Candy>) :
     RecyclerView.Adapter<CandiesAdapter.CandyViewHolder>() {
@@ -27,6 +30,7 @@ class CandiesAdapter(private val candies: List<Candy>) :
         fun bind(item: Candy) {
             binding.tvBrand.text = item.brand
             binding.tvCode.text = item.code.toString()
+            Glide.with(binding.root).load(item.imageURL).into(binding.ivLogo)
         }
     }
 }

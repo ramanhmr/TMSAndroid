@@ -7,13 +7,20 @@
 
     <TextView
         android:id="@+id/tv_brand"
-        android:layout_width="160dp"
+        android:layout_width="96dp"
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:gravity="center_vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tool:text="Brand name" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_code"
@@ -22,7 +29,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:gravity="center_vertical"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_logo"
         app:layout_constraintStart_toEndOf="@id/tv_brand"
         app:layout_constraintTop_toTopOf="parent"
         tool:text="Item code" />
