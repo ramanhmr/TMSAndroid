@@ -19,7 +19,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:text="@string/hw7_login"
+        android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@id/tv_password_banner"
         app:layout_constraintEnd_toEndOf="@+id/tv_password_banner" />
 
@@ -39,7 +39,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="20dp"
         android:gravity="end"
-        android:text="@string/hw7_password"
+        android:text="@string/password"
         app:layout_constraintBottom_toBottomOf="@id/iv_profile_picture"
         app:layout_constraintStart_toEndOf="@id/iv_profile_picture" />
 
@@ -56,7 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/hw8_close"
+        android:text="@string/close"
         app:layout_constraintEnd_toEndOf="@id/tv_password"
         app:layout_constraintStart_toStartOf="@+id/iv_profile_picture"
         app:layout_constraintTop_toBottomOf="@+id/iv_profile_picture"

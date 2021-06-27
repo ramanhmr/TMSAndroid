@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.R
-import com.ramanhmr.tmsandroid.databinding.ActivityHw7CountdownBinding
+import com.ramanhmr.tmsandroid.databinding.ActivityCountdownBinding
 
 class CountdownActivity : AppCompatActivity() {
     private var counter: Int = 10
@@ -17,11 +17,11 @@ class CountdownActivity : AppCompatActivity() {
             showEditText()
         }
     }
-    private lateinit var binding: ActivityHw7CountdownBinding
+    private lateinit var binding: ActivityCountdownBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHw7CountdownBinding.inflate(layoutInflater)
+        binding = ActivityCountdownBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         savedInstanceState?.let {
@@ -42,7 +42,7 @@ class CountdownActivity : AppCompatActivity() {
     private fun showEditText() {
         changeBtnOnClick()
         with(binding) {
-            btnTapMe.text = getString(R.string.hw7_enter)
+            btnTapMe.text = getString(R.string.enter)
             tvCount.visibility = View.GONE
             vgLoginPassword.visibility = View.VISIBLE
             btnTapMe.setOnClickListener(btnOnClick)

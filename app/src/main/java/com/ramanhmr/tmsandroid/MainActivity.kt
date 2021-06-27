@@ -2,12 +2,11 @@ package com.ramanhmr.tmsandroid
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.button.MaterialButton
 import com.ramanhmr.tmsandroid.databinding.ActivityMainBinding
 import com.ramanhmr.tmsandroid.homework10.CandiesActivity
+import com.ramanhmr.tmsandroid.homework12.FragmentsActivity
 import com.ramanhmr.tmsandroid.homework6.FlagsActivity
 import com.ramanhmr.tmsandroid.homework7.CountdownActivity
 
@@ -21,6 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnFlags.setOnClickListener(this)
         binding.btnCountdown.setOnClickListener(this)
         binding.btnCandies.setOnClickListener(this)
+        binding.btnFragments.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_candies -> startActivity(Intent(view.context, CandiesActivity::class.java))
             R.id.btn_countdown -> startActivity(Intent(view.context, CountdownActivity::class.java))
             R.id.btn_flags -> startActivity(Intent(view.context, FlagsActivity::class.java))
+            R.id.btn_fragments -> startActivity(Intent(view.context, FragmentsActivity::class.java))
         }
     }
 }

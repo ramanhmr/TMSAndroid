@@ -28,6 +28,7 @@
         <activity
             android:name=".homework10.CandiesActivity"
             android:screenOrientation="fullSensor" />
+        <activity android:name=".homework12.FragmentsActivity" />
     </application>
 
 </manifest>

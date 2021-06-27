@@ -1,19 +1,21 @@
 <resources>
     <string name="app_name">TMS Android</string>
-    <string name="flags_main_btn">HOMEWORK 6\nthe one with flags</string>
-    <string name="countdown_main_btn">HOMEWORK 7\nthe one with countdown</string>
+    <string name="homework6">HOMEWORK 6\nthe one with flags</string>
+    <string name="homework7">HOMEWORK 7\nthe one with countdown</string>
     <string name="poland">Poland</string>
     <string name="germany">Germany</string>
     <string name="france">France</string>
     <string name="latvia">Latvia</string>
     <string name="finland">Finland</string>
-    <string name="hw7_tapMe">Tap Me</string>
-    <string name="hw7_enter">Войти</string>
-    <string name="hw7_loginInput">Введите логин</string>
-    <string name="hw7_passwordInput">Введите пароль</string>
-    <string name="hw7_login">Логин:</string>
-    <string name="hw7_password">Пароль:</string>
-    <string name="hw7_user_info">Информация о пользователе</string>
-    <string name="hw8_close">Close</string>
-    <string name="candies_main_btn">HOMEWORK 10\nthe one with candies</string>
+    <string name="tap_me">Tap Me</string>
+    <string name="enter">Войти</string>
+    <string name="login_input">Введите логин</string>
+    <string name="password_input">Введите пароль</string>
+    <string name="login">Логин:</string>
+    <string name="password">Пароль:</string>
+    <string name="user_info">Информация о пользователе</string>
+    <string name="close">Close</string>
+    <string name="homework10">HOMEWORK 10\nthe one with candies</string>
+    <string name="homework12">HOMEWORK 12\nthe one with fragments</string>
+    <string name="change_fragment">Change fragment</string>
 </resources>

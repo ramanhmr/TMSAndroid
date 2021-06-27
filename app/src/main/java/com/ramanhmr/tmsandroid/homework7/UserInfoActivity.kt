@@ -4,14 +4,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.ramanhmr.tmsandroid.R
-import com.ramanhmr.tmsandroid.databinding.ActivityHw7UserInfoBinding
+import com.ramanhmr.tmsandroid.databinding.ActivityUserInfoBinding
 
 class UserInfoActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityHw7UserInfoBinding
+    private lateinit var binding: ActivityUserInfoBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityHw7UserInfoBinding.inflate(layoutInflater)
+        binding = ActivityUserInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         with(binding) {

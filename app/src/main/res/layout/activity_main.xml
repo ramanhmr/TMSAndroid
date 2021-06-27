@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_flags"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:gravity="center"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:text="@string/homework6"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_flags"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flags_main_btn"
-            android:textAllCaps="false"
-            app:cornerRadius="8dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homework7"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_countdown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/countdown_main_btn"
-            android:textAllCaps="false"
-            app:cornerRadius="8dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_candies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homework10"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_candies"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/candies_main_btn"
-            android:textAllCaps="false"
-            app:cornerRadius="8dp" />
-    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fragments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/homework12"
+        android:textAllCaps="false"
+        app:cornerRadius="8dp" />
+</LinearLayout>
