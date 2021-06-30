@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.ramanhmr.tmsandroid.databinding.ActivityMainBinding
 import com.ramanhmr.tmsandroid.homework10.CandiesActivity
 import com.ramanhmr.tmsandroid.homework12.FragmentsActivity
+import com.ramanhmr.tmsandroid.homework13.CandyFragmentActivity
 import com.ramanhmr.tmsandroid.homework6.FlagsActivity
 import com.ramanhmr.tmsandroid.homework7.CountdownActivity
 
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnCountdown.setOnClickListener(this)
         binding.btnCandies.setOnClickListener(this)
         binding.btnFragments.setOnClickListener(this)
+        binding.btnCandyFragments.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -29,6 +31,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_countdown -> startActivity(Intent(view.context, CountdownActivity::class.java))
             R.id.btn_flags -> startActivity(Intent(view.context, FlagsActivity::class.java))
             R.id.btn_fragments -> startActivity(Intent(view.context, FragmentsActivity::class.java))
+            R.id.btn_candy_fragments -> startActivity(
+                Intent(
+                    view.context,
+                    CandyFragmentActivity::class.java
+                )
+            )
         }
     }
 }

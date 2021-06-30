@@ -2,10 +2,6 @@ package com.ramanhmr.tmsandroid.homework12
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.add
-import androidx.fragment.app.commit
-import androidx.fragment.app.replace
-import com.ramanhmr.tmsandroid.R
 import com.ramanhmr.tmsandroid.databinding.ActivityFragmetnsBinding
 import kotlin.random.Random
 
@@ -27,28 +23,27 @@ class FragmentsActivity : AppCompatActivity() {
     }
 
     private fun addFragment(fragmentCode: Int) {
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            when (fragmentCode) {
-                0 -> add<BlackFragment>(R.id.fc_fragments)
-                1 -> add<GreenFragment>(R.id.fc_fragments)
-                2 -> add<PurpleFragment>(R.id.fc_fragments)
-                3 -> add<RedFragment>(R.id.fc_fragments)
-                4 -> add<YellowFragment>(R.id.fc_fragments)
-            }
+        chooseFragment(fragmentCode)?.let {
+            supportFragmentManager.beginTransaction()
+                .add(binding.fcFragments.id, it, null)
+                .commit()
         }
     }
 
     private fun replaceFragment(fragmentCode: Int) {
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            when (fragmentCode) {
-                0 -> replace<BlackFragment>(R.id.fc_fragments)
-                1 -> replace<GreenFragment>(R.id.fc_fragments)
-                2 -> replace<PurpleFragment>(R.id.fc_fragments)
-                3 -> replace<RedFragment>(R.id.fc_fragments)
-                4 -> replace<YellowFragment>(R.id.fc_fragments)
-            }
+        chooseFragment(fragmentCode)?.let {
+            supportFragmentManager.beginTransaction()
+                .replace(binding.fcFragments.id, it, null)
+                .commit()
         }
+    }
+
+    private fun chooseFragment(fragmentCode: Int) = when (fragmentCode) {
+        0 -> BlackFragment::class.java
+        1 -> GreenFragment::class.java
+        2 -> PurpleFragment::class.java
+        3 -> RedFragment::class.java
+        4 -> YellowFragment::class.java
+        else -> null
     }
 }

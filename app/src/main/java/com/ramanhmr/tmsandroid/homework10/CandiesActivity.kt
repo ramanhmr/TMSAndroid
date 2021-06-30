@@ -3,7 +3,6 @@ package com.ramanhmr.tmsandroid.homework10
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ramanhmr.tmsandroid.databinding.ActivityCandiesBinding
 
@@ -18,8 +17,10 @@ class CandiesActivity : AppCompatActivity() {
 
         binding.rvCandies.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        val candiesAdapter = CandiesAdapter(mutableListOf())
+        binding.rvCandies.adapter = candiesAdapter
         viewModel.candyListLiveData.observe(
             this,
-            { binding.rvCandies.adapter = CandiesAdapter(it) })
+            { candiesAdapter.update(it) })
     }
 }

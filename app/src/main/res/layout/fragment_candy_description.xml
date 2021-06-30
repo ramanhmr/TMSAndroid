@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="40dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/iv_candy_logo"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="40dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_barcode"
+        app:layout_constraintEnd_toEndOf="@id/iv_candy_logo"
+        app:layout_constraintStart_toStartOf="@id/iv_candy_logo"
+        app:layout_constraintTop_toBottomOf="@id/iv_candy_logo" />
+
+    <TextView
+        android:id="@+id/tv_barcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_candy_logo"
+        app:layout_constraintStart_toStartOf="@id/iv_candy_logo"
+        app:layout_constraintTop_toBottomOf="@id/tv_brand" />
+</androidx.constraintlayout.widget.ConstraintLayout>
