@@ -19,4 +19,6 @@
     <string name="homework12">HOMEWORK 12\nthe one with fragments</string>
     <string name="change_fragment">Change fragment</string>
     <string name="homework13">HOMEWORK 13\nthe one with candy fragments</string>
+    <string name="toast_last_candy">Последняя конфета: %s,\nштрих-код: %d</string>
+    <string name="toast_no_candy">Вы ещё не выбирали конфету</string>
 </resources>
