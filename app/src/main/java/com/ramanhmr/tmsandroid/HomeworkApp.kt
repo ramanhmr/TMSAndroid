@@ -1,6 +1,7 @@
-package com.ramanhmr.tmsandroid.homework14
+package com.ramanhmr.tmsandroid
 
 import android.app.Application
+import com.ramanhmr.tmsandroid.homework14.SharedPrefsCandyUtils
 
 class HomeworkApp : Application() {
 

@@ -27,12 +27,12 @@ class CandyDescriptionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         with(arguments?.getSerializable(CANDY_BUNDLE_KEY) as Candy) {
-            SharedPrefsCandyUtils.putBrand(this.brand)
-            SharedPrefsCandyUtils.putCode(this.code)
+            SharedPrefsCandyUtils.putBrand(brand)
+            SharedPrefsCandyUtils.putCode(code)
             binding?.let {
-                it.tvBarcode.text = this.code.toString()
-                it.tvBrand.text = this.brand
-                Glide.with(it.root).load(this.imageURL).into(it.ivCandyLogo)
+                it.tvBarcode.text = code.toString()
+                it.tvBrand.text = brand
+                Glide.with(it.root).load(imageURL).into(it.ivCandyLogo)
                 val anim = AnimationUtils.loadAnimation(context, R.anim.anim_alpha_scale)
                 it.ivCandyLogo.startAnimation(anim)
             }
