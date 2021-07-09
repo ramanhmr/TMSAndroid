@@ -5,13 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".HomeworkApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TMSAndroid"
-        android:name=".HomeworkApp">
+        android:theme="@style/Theme.TMSAndroid">
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,6 +31,7 @@
             android:screenOrientation="fullSensor" />
         <activity android:name=".homework12.FragmentsActivity" />
         <activity android:name=".homework13.CandyFragmentActivity" />
+        <activity android:name=".homework16.MessagesActivity" />
     </application>
 
 </manifest>

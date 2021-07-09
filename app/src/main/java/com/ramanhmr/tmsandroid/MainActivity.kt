@@ -8,6 +8,7 @@ import com.ramanhmr.tmsandroid.databinding.ActivityMainBinding
 import com.ramanhmr.tmsandroid.homework10.CandiesActivity
 import com.ramanhmr.tmsandroid.homework12.FragmentsActivity
 import com.ramanhmr.tmsandroid.homework13.CandyFragmentActivity
+import com.ramanhmr.tmsandroid.homework16.MessagesActivity
 import com.ramanhmr.tmsandroid.homework6.FlagsActivity
 import com.ramanhmr.tmsandroid.homework7.CountdownActivity
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnCandies.setOnClickListener(this)
         binding.btnFragments.setOnClickListener(this)
         binding.btnCandyFragments.setOnClickListener(this)
+        binding.btnMessages.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -37,6 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     CandyFragmentActivity::class.java
                 )
             )
+            R.id.btn_messages -> startActivity(Intent(view.context, MessagesActivity::class.java))
         }
     }
 }
