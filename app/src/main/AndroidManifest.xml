@@ -32,6 +32,7 @@
         <activity android:name=".homework12.FragmentsActivity" />
         <activity android:name=".homework13.CandyFragmentActivity" />
         <activity android:name=".homework16.MessagesActivity" />
+        <activity android:name=".homework17.CurrencyActivity" />
     </application>
 
 </manifest>

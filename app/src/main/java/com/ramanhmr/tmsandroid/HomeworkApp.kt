@@ -5,6 +5,8 @@ import androidx.room.Room
 import com.ramanhmr.tmsandroid.homework14.SharedPrefsCandyUtils
 import com.ramanhmr.tmsandroid.homework16.database.MessageDao
 import com.ramanhmr.tmsandroid.homework16.database.MessageDatabase
+import com.ramanhmr.tmsandroid.homework17.CurrencyRepository
+import com.ramanhmr.tmsandroid.homework17.restApi.FiatCurrencyService
 
 class HomeworkApp : Application() {
 
@@ -13,6 +15,7 @@ class HomeworkApp : Application() {
     }
 
     val messageDao: MessageDao by lazy { messageDatabase.messageDao() }
+    val currencyRepository by lazy { CurrencyRepository(FiatCurrencyService.getCurrencyService()) }
 
     override fun onCreate() {
         super.onCreate()

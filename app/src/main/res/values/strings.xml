@@ -22,5 +22,11 @@
     <string name="toast_last_candy">Последняя конфета: %s,\nштрих-код: %d</string>
     <string name="toast_no_candy">Вы ещё не выбирали конфету</string>
     <string name="homework16">HOMEWORK 16\nthe one with messages</string>
+    <string name="homework17">HOMEWORK 17\nthe one with currencies</string>
     <string name="enter_message">Введите сообщение</string>
+    <string name="number_of_currencies">Число валют</string>
+    <string-array name="spinner_sorting">
+        <item>Имя</item>
+        <item>ID</item>
+    </string-array>
 </resources>
