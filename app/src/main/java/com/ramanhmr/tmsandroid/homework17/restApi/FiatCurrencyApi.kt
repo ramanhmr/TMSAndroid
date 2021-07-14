@@ -10,7 +10,7 @@ interface FiatCurrencyApi {
     @Headers("X-CMC_PRO_API_KEY: ${FiatCurrencyService.API_KEY}")
     @GET("v1/fiat/map")
     suspend fun getFiatCurrencyList(
-        @Query("limit") limit: Int = 20,
+        @Query("limit") limit: Int = FiatCurrencyService.DEFAULT_LIMIT,
         @Query("sort") sort: String = FiatCurrencyService.ID
     ): FiatResponseEntity
 }

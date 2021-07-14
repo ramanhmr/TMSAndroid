@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.ramanhmr.tmsandroid.homework17.restApi.FiatCurrencyService
 import kotlinx.coroutines.launch
 
 class CurrencyViewModel(private val currencyRepository: CurrencyRepository) : ViewModel() {
@@ -15,7 +16,7 @@ class CurrencyViewModel(private val currencyRepository: CurrencyRepository) : Vi
         }
     }
 
-    fun getCurrencies(sort: String, limit: Int = 20) {
+    fun getCurrencies(sort: String, limit: Int = FiatCurrencyService.DEFAULT_LIMIT) {
         viewModelScope.launch {
             currenciesLiveData.value = currencyRepository.getCurrencies(limit, sort)
         }

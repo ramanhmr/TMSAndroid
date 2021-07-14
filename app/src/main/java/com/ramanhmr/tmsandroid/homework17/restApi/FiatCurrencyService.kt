@@ -9,6 +9,7 @@ object FiatCurrencyService {
 
     const val ID = "id"
     const val NAME = "name"
+    const val DEFAULT_LIMIT = 20
 
     private fun getRetrofit() = Retrofit.Builder()
         .baseUrl(BASE_URL)

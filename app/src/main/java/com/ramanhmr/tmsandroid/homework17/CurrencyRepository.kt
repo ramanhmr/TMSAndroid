@@ -8,7 +8,10 @@ import kotlinx.coroutines.withContext
 
 class CurrencyRepository(private val currencyApi: FiatCurrencyApi) {
 
-    suspend fun getCurrencies(limit: Int = 20, sort: String = FiatCurrencyService.ID) =
+    suspend fun getCurrencies(
+        limit: Int = FiatCurrencyService.DEFAULT_LIMIT,
+        sort: String = FiatCurrencyService.ID
+    ) =
         withContext(Dispatchers.IO) {
             currencyApi.getFiatCurrencyList(limit, sort).toCurrencyList()
         }
