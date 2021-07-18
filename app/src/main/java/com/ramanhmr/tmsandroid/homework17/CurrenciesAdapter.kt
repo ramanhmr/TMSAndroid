@@ -2,11 +2,13 @@ package com.ramanhmr.tmsandroid.homework17
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ramanhmr.tmsandroid.databinding.ItemCurrencyBinding
 
-class CurrenciesAdapter(private var currencies: MutableList<Currency>) :
-    RecyclerView.Adapter<CurrenciesAdapter.CurrencyViewHolder>() {
+class CurrenciesAdapter :
+    ListAdapter<Currency, CurrenciesAdapter.CurrencyViewHolder>(DiffUtillCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CurrencyViewHolder =
         CurrencyViewHolder(
@@ -18,15 +20,7 @@ class CurrenciesAdapter(private var currencies: MutableList<Currency>) :
         )
 
     override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
-        holder.bind(currencies[position])
-    }
-
-    override fun getItemCount(): Int = currencies.size
-
-    fun update(newList: List<Currency>) {
-        currencies.clear()
-        currencies.addAll(newList)
-        notifyDataSetChanged()
+        holder.bind(getItem(position))
     }
 
     class CurrencyViewHolder(private val binding: ItemCurrencyBinding) :
@@ -36,4 +30,15 @@ class CurrenciesAdapter(private var currencies: MutableList<Currency>) :
             binding.tvName.text = currency.name
         }
     }
+}
+
+class DiffUtillCallback : DiffUtil.ItemCallback<Currency>() {
+    override fun areItemsTheSame(oldItem: Currency, newItem: Currency): Boolean {
+        return oldItem == newItem
+    }
+
+    override fun areContentsTheSame(oldItem: Currency, newItem: Currency): Boolean {
+        return oldItem.name == newItem.name && oldItem.id == newItem.id
+    }
+
 }
