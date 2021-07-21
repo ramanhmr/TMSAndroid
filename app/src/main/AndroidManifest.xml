@@ -33,6 +33,13 @@
         <activity android:name=".homework13.CandyFragmentActivity" />
         <activity android:name=".homework16.MessagesActivity" />
         <activity android:name=".homework17.CurrencyActivity" />
+        <activity android:name=".homework19.AlarmActivity" />
+
+        <receiver
+            android:name=".homework19.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".homework19.NotificationService" />
     </application>
 
 </manifest>

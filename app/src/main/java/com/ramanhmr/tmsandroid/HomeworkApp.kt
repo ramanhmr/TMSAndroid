@@ -1,6 +1,8 @@
 package com.ramanhmr.tmsandroid
 
+import android.app.AlarmManager
 import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.ramanhmr.tmsandroid.homework14.SharedPrefsCandyUtils
 import com.ramanhmr.tmsandroid.homework16.database.MessageDao
@@ -25,7 +27,7 @@ class HomeworkApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@HomeworkApp)
-            modules(listOf(viewModels, storageModule, repositoryModule))
+            modules(viewModels, storageModule, repositoryModule, systemModule)
         }
 
         SharedPrefsCandyUtils.sharedPrefs =
@@ -42,5 +44,9 @@ class HomeworkApp : Application() {
 
     private val storageModule = module {
         factory { FiatCurrencyService.getCurrencyService() }
+    }
+
+    private val systemModule = module {
+        factory { get<Context>().getSystemService(ALARM_SERVICE) as AlarmManager }
     }
 }

@@ -29,4 +29,9 @@
         <item>Имя</item>
         <item>ID</item>
     </string-array>
+    <string name="homework19">HOMEWORK 19\nthe one with alarm clock</string>
+    <string name="save">save</string>
+    <string name="sound">Sound</string>
+    <string name="alarm">Alarm</string>
+    <string name="alarm_created">Alarm created</string>
 </resources>
