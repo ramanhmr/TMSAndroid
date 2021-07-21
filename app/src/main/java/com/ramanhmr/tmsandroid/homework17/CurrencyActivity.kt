@@ -8,20 +8,17 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.ramanhmr.tmsandroid.HomeworkApp
 import com.ramanhmr.tmsandroid.R
 import com.ramanhmr.tmsandroid.databinding.ActivityCurrencyBinding
 import com.ramanhmr.tmsandroid.homework17.restApi.FiatCurrencyService
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CurrencyActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCurrencyBinding
-    private val viewModel: CurrencyViewModel by viewModels {
-        CurrencyViewModelFactory((application as HomeworkApp).currencyRepository)
-    }
+    private val viewModel: CurrencyViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +33,10 @@ class CurrencyActivity : AppCompatActivity() {
 
         binding.rvCurrencies.layoutManager =
             LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        val recyclerAdapter = CurrenciesAdapter(mutableListOf())
+        val recyclerAdapter = CurrenciesAdapter()
         binding.rvCurrencies.adapter = recyclerAdapter
         viewModel.currenciesLiveData.observe(this, {
-            recyclerAdapter.update(it)
+            recyclerAdapter.submitList(it)
         })
 
         with(binding.etNumberOfItems) {
