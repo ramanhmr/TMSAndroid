@@ -11,6 +11,7 @@ import com.ramanhmr.tmsandroid.homework13.CandyFragmentActivity
 import com.ramanhmr.tmsandroid.homework16.MessagesActivity
 import com.ramanhmr.tmsandroid.homework17.CurrencyActivity
 import com.ramanhmr.tmsandroid.homework19.AlarmActivity
+import com.ramanhmr.tmsandroid.homework20.WeatherLocationActivity
 import com.ramanhmr.tmsandroid.homework6.FlagsActivity
 import com.ramanhmr.tmsandroid.homework7.CountdownActivity
 
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.btnMessages.setOnClickListener(this)
         binding.btnCurrencies.setOnClickListener(this)
         binding.btnAlarmClock.setOnClickListener(this)
+        binding.btnWeatherLocation.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
@@ -46,6 +48,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_messages -> startActivity(Intent(view.context, MessagesActivity::class.java))
             R.id.btn_currencies -> startActivity(Intent(view.context, CurrencyActivity::class.java))
             R.id.btn_alarm_clock -> startActivity(Intent(view.context, AlarmActivity::class.java))
+            R.id.btn_weather_location -> startActivity(
+                Intent(
+                    view.context,
+                    WeatherLocationActivity::class.java
+                )
+            )
         }
     }
 }

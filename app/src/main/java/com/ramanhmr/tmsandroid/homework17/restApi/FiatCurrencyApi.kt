@@ -8,7 +8,7 @@ import retrofit2.http.Query
 
 interface FiatCurrencyApi {
 
-    @Headers("X-CMC_PRO_API_KEY: ${BuildConfig.API_KEY}")
+    @Headers("X-CMC_PRO_API_KEY: ${BuildConfig.CURRENCY_API_KEY}")
     @GET("v1/fiat/map")
     suspend fun getFiatCurrencyList(
         @Query("limit") limit: Int = FiatCurrencyService.DEFAULT_LIMIT,

@@ -13,11 +13,11 @@ object SharedPrefsCandyUtils {
         sharedPrefs.contains(PREFS_CODE_KEY) && sharedPrefs.contains(PREFS_BRAND_KEY)
 
     fun putCode(value: Int) {
-        sharedPrefs.edit().putInt(PREFS_CODE_KEY, value).commit()
+        sharedPrefs.edit().putInt(PREFS_CODE_KEY, value).apply()
     }
 
     fun putBrand(value: String) {
-        sharedPrefs.edit().putString(PREFS_BRAND_KEY, value).commit()
+        sharedPrefs.edit().putString(PREFS_BRAND_KEY, value).apply()
     }
 
     fun getCode() = sharedPrefs.getInt(PREFS_CODE_KEY, -1)

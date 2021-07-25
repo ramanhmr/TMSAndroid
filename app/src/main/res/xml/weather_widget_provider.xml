@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android1="http://schemas.android.com/apk/res/android"
+    android1:initialLayout="@layout/widget_weather"
+    android1:minHeight="40dp"
+    android1:minWidth="180dp"
+    android1:updatePeriodMillis="3600000"
+    android1:resizeMode="horizontal"
+    android1:widgetCategory="home_screen" />
