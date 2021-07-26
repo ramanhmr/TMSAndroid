@@ -2,7 +2,6 @@ package com.ramanhmr.tmsandroid.homework17
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.ramanhmr.tmsandroid.homework17.restApi.FiatCurrencyService
 import kotlinx.coroutines.launch
@@ -21,12 +20,4 @@ class CurrencyViewModel(private val currencyRepository: CurrencyRepository) : Vi
             currenciesLiveData.value = currencyRepository.getCurrencies(limit, sort)
         }
     }
-}
-
-class CurrencyViewModelFactory(private val currencyRepository: CurrencyRepository) :
-    ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        return CurrencyViewModel(currencyRepository) as T
-    }
-
 }

@@ -33,6 +33,23 @@
         <activity android:name=".homework13.CandyFragmentActivity" />
         <activity android:name=".homework16.MessagesActivity" />
         <activity android:name=".homework17.CurrencyActivity" />
-    </application>
+        <activity android:name=".homework19.AlarmActivity" />
+        <activity android:name=".homework20.WeatherLocationActivity" />
 
+        <receiver
+            android:name=".homework19.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".homework20.WeatherWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/weather_widget_provider" />
+        </receiver>
+
+        <service android:name=".homework19.NotificationService" />
+        <service android:name=".homework20.UpdateWeatherWidgetService" />
+    </application>
 </manifest>

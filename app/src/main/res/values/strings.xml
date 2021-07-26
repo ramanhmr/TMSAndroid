@@ -29,4 +29,15 @@
         <item>Имя</item>
         <item>ID</item>
     </string-array>
+    <string name="homework19">HOMEWORK 19\nthe one with alarm clock</string>
+    <string name="save">save</string>
+    <string name="sound">Sound</string>
+    <string name="alarm">Alarm</string>
+    <string name="alarm_created">Alarm created</string>
+    <string name="enter_location">Enter location</string>
+    <string name="enter_city">Enter your city</string>
+    <string name="confirm">Confirm</string>
+    <string name="homework20">HOMEWORK 20\nlocation for weather widget</string>
+    <string name="no_such_city">There are no such city in database.\nTry again!</string>
+    <string name="wind">Wind:</string>
 </resources>
